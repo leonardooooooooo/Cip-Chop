@@ -1,0 +1,33 @@
+@prefix ex: <http://example.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+ex:Leonardo a ex:Student ;
+	foaf:firstName "Leonardo" ;
+	foaf:surname "Ranaldi";
+	ex:creatorOf ex:cipandchopSystem ;
+	ex:homeAddress _:node1 .
+
+	_:node1  ex:street "20 Via Rossi" ;
+	         ex:city "Frascati" ;
+	         ex:country "Italy" .
+
+ex:cipandchopSystem a ex:System ;
+            rdfs:label "cipandchopSystem ";
+            ex:technique "rdf4jApplication".
+
+ex:Dario a ex:Student ;
+        	foaf:firstName "Dario" ;
+            foaf:surname "Onorati";
+            ex:creatorOf ex:cipandchopSystem, ex:dialogwareProgramming.
+
+ex:dialoguareProgramming a ex:System ;
+            ex:technique "javaApplication";
+            rdfs:label "dialogwareProgramming" .
+
+
+ex:Luca a ex:Student ;
+        	foaf:firstName "Luca" ;
+            foaf:surname "Berloco";
+            ex:creatorOf ex:cipandchopSystem, ex:programTest.
+ex:programTest a ex:System ;
+            rdfs:label "programTest ";
+            ex:technique "c#Application".
